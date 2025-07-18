@@ -9,7 +9,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  Widget BuildEmail() {
+  /*Widget BuildEmail() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -98,7 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
       ],
     );
   }
-
+*/
   Widget BuildloginBTN() {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 25),
@@ -125,6 +125,59 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  Widget BuildTextField({
+    required String labelText,
+    required IconData icon,
+    required String hintText,
+    bool isPassword = false,
+    TextInputType inputType = TextInputType.text,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          labelText,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 10),
+        Container(
+          alignment: Alignment.centerLeft,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black26,
+                blurRadius: 6,
+                offset: Offset(0, 2),
+              ),
+            ],
+          ),
+          height: 60,
+          child: TextField(
+            obscureText: isPassword,
+            keyboardType: inputType,
+            style: TextStyle(color: Colors.black87),
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              contentPadding: EdgeInsets.only(top: 14),
+              prefixIcon: Icon(
+                icon,
+                color: Color(0XFF5AC18E),
+              ),
+              hintText: hintText,
+              hintStyle: TextStyle(color: Colors.black38),
+            ),
+          ),
+        ),
+      ],
     );
   }
 
@@ -198,9 +251,19 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                       SizedBox(height: 50),
-                      BuildEmail(),
+                      BuildTextField(
+                        labelText: 'Email',
+                        icon: Icons.email,
+                        hintText: 'Email',
+                        inputType: TextInputType.emailAddress,
+                      ),
                       SizedBox(height: 20),
-                      BuildPassword(),
+                      BuildTextField(
+                        labelText: 'Password',
+                        icon: Icons.key,
+                        hintText: 'Password',
+                        isPassword: true,
+                      ),
                       BuildloginBTN(),
                       BuildSignupBTN(),
                     ],
