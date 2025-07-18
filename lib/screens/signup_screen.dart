@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'signup_screen.dart';
-import 'menu_screen.dart';
+import 'login_screen.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignupScreen extends StatefulWidget {
+  const SignupScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignupScreen> createState() => _SignupScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignupScreenState extends State<SignupScreen> {
   Widget buildTextField({
     required String labelText,
     required IconData icon,
@@ -64,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget buildloginBTN() {
+  Widget buildSignupBTN() {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 25),
       width: double.infinity,
@@ -72,11 +71,11 @@ class _LoginScreenState extends State<LoginScreen> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => MenuScreen()),
+            MaterialPageRoute(builder: (context) => LoginScreen()),
           );
         },
         child: Text(
-          'LOGIN',
+          'Sign Up',
           style: TextStyle(
               color: Color(
                 0xFF5AC18E,
@@ -91,39 +90,6 @@ class _LoginScreenState extends State<LoginScreen> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
           ),
-        ),
-      ),
-    );
-  }
-
-  Widget buildSignupBTN() {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => SignupScreen()),
-        );
-      },
-      child: RichText(
-        text: TextSpan(
-          children: [
-            TextSpan(
-              text: 'Don\'t have an Account? ',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            TextSpan(
-              text: 'Sign Up',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
         ),
       ),
     );
@@ -161,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        'Log In',
+                        'Sign Up',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 40,
@@ -180,7 +146,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           icon: Icons.key,
                           hintText: 'Password',
                           isPassword: true),
-                      buildloginBTN(),
                       buildSignupBTN(),
                     ],
                   ),
