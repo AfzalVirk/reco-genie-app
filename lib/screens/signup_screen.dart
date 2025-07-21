@@ -32,10 +32,10 @@ class _SignupScreenState extends State<SignupScreen> {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      Color(0x665AC18E),
-                      Color(0x995AC18E),
-                      Color(0xCC5AC18E),
-                      Color(0xFF5AC18E),
+                      Color(0x8C0e2f44),
+                      Color(0x990e2f44),
+                      Color(0xCC0e2f44),
+                      Color(0xFF0e2f44),
                     ],
                   ),
                 ),
@@ -83,7 +83,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             hintText: 'Email',
                             hintStyle: TextStyle(color: Colors.black38),
                             prefixIcon:
-                                Icon(Icons.email, color: Color(0XFF5AC18E)),
+                                Icon(Icons.email, color: Color(0xFF0e2f44)),
                             filled: true,
                             fillColor: Colors.white,
                             contentPadding: EdgeInsets.only(top: 40),
@@ -117,7 +117,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             hintText: 'Password',
                             hintStyle: TextStyle(color: Colors.black38),
                             prefixIcon:
-                                Icon(Icons.key, color: Color(0XFF5AC18E)),
+                                Icon(Icons.key, color: Color(0xFF0e2f44)),
                             filled: true,
                             fillColor: Colors.white,
                             contentPadding: EdgeInsets.only(top: 40),
@@ -164,7 +164,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             child: Text(
                               'Sign Up',
                               style: TextStyle(
-                                color: Color(0xFF5AC18E),
+                                color: Color(0xFF0e2f44),
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),

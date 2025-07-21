@@ -33,10 +33,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      Color(0x665AC18E),
-                      Color(0x995AC18E),
-                      Color(0xCC5AC18E),
-                      Color(0xFF5AC18E),
+                      Color(0x8C0e2f44),
+                      Color(0x990e2f44),
+                      Color(0xCC0e2f44),
+                      Color(0xFF0e2f44),
                     ],
                   ),
                 ),
@@ -85,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             hintText: 'Email',
                             hintStyle: TextStyle(color: Colors.black38),
                             prefixIcon: const Icon(Icons.email,
-                                color: Color(0XFF5AC18E)),
+                                color: Color(0XFF0e2f44)),
                             filled: true,
                             fillColor: Colors.white,
                             contentPadding: EdgeInsets.only(top: 40),
@@ -116,8 +116,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           decoration: InputDecoration(
                             hintText: 'Password',
                             hintStyle: TextStyle(color: Colors.black38),
-                            prefixIcon: const Icon(Icons.lock,
-                                color: Color(0XFF5AC18E)),
+                            prefixIcon:
+                                const Icon(Icons.key, color: Color(0XFF0e2f44)),
                             filled: true,
                             fillColor: Colors.white,
                             contentPadding: EdgeInsets.only(top: 40),
@@ -166,7 +166,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: const Text(
                               'Log In',
                               style: TextStyle(
-                                color: Color(0xFF5AC18E),
+                                color: Color(0xFF0e2f44),
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
